@@ -1,0 +1,506 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Poppins',sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-padding-top: 70px;
+}
+
+body{
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #03045E, #0077B6, #90E0EF);
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255, 165, 35, 0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+    radial-gradient(2px 2px at 80% 20%, #fff, transparent),
+    radial-gradient(2px 2px at 50% 50%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 60% 70%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 30% 80%, #fff, transparent);
+  z-index: -2;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+header{
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+section {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
+  scroll-margin-top: 70px;
+}
+
+.logo{
+  font-size: 3rem;
+  color: #F5A623;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+nav a{
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover, 
+nav a:active{
+  color: #F5A623;
+  border-bottom: 3px solid #F5A623;
+}
+
+
+  nav.active{
+    display: block;
+  }
+
+  nav a:hover,
+  nav a.active{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #F5A623;
+  }
+
+section{
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
+  background: transparent;
+}
+
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+.home .home-content h1{
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+span{
+  color: #F5A623;
+}
+
+.home-content h3{
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.home-content p{
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.home-img{
+  border-radius: 50%;
+}
+
+.home-img img{
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px solid #F5A623;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.home-img img:hover{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #F5A623;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3 ease;
+  color: white;
+}
+
+.social-icons a:hover{
+  color: black;
+  transform: scale(1.3)translateY(-5px);
+  background-color: #F5A623;
+  box-shadow: 0 0 25px #F5A623;
+}
+
+.typing-text{
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span{
+  position: relative;
+}
+
+.typing-text span::before{
+  content: "Game Developer";
+  color: #F5A623;
+  animation: words 20s infinite;
+}
+
+.typing-text span::after{
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid white;
+  right: -8;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+  to{
+    border-left: 3px solid;
+  }
+}
+
+@keyframes words{
+  0%, 20%{
+    content: "Web Developer";
+  }
+  21%,40%{
+    content: "Software Developer";
+  }
+  41%,60%{
+    content: "Web Designer";
+  }
+  61%,80%{
+    content: "Gamer";
+  }
+  81%,100%{
+    content: "Content Creator";
+  }
+}
+
+@media (max-width: 1000px){
+  .home{
+    gap: 4rem;
+  }
+}
+
+@media(max-width: 995px){
+  .home{
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+
+  .home .home-content h3{
+    font-size: 2.5rem;
+  }
+
+  .home-content h1{
+    font-size: 5rem;
+  }
+
+  .home-img img{
+    width: 70vh;
+    margin-top: 4rem;
+  }
+}
+
+.skill{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  color: #F5A623;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  background-color: #0077B6;
+  border: 2px solid #F5A623;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem;
+}
+
+.skill-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #F5A623;
+}
+
+.skill-box i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #F5A623;
+}
+
+.skill-box h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.skill-box p {
+  font-size: 1.6rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    gap: 2rem;
+  }
+
+  .skill-box {
+    width: 250px;
+    padding: 1.5rem;
+  }
+}
+
+.skill-box .fa-gamepad,
+.skill-box .fa-video {
+  font-size: 3rem; 
+}
+
+.skill-box h3 {
+  font-size: 2.4rem;
+}
+
+.skill-box p {
+  font-size: 1.6rem;
+}
+
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 9%;
+  color: white;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.edu-img img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px #F5A623;
+}
+
+.edu-content {
+  max-width: 600px;
+  flex: 1;
+}
+
+.edu-content h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.edu-content p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  border-left: 3px solid #F5A623;
+}
+
+.timeline-date {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #F5A623;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #F5A623;
+  border-radius: 50%;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 10rem; 
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.contact-text {
+  max-width: 50%;
+  text-align: left;
+}
+
+.contact-text h3 {
+  font-size: 2.5rem;
+  color: #F5A623;
+  margin-bottom: 1rem;
+}
+
+.contact-text p {
+  font-size: 1.6rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #0077B6;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 350px; 
+  min-width: 300px; 
+  text-align: left;
+  box-shadow: 0 0 20px #F5A623;
+  word-wrap: break-word;
+}
+
+.contact-item i {
+  font-size: 3rem;
+  color: #F5A623;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.contact-info p {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.contact-info a {
+  color: #F5A623;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
